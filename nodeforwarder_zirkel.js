@@ -67,7 +67,7 @@ serialPort.on('data', function(data) {
    ts = new Date().getTime();
    buf += data;
    var n = buf.indexOf("ST.");
-   buf = buf.substr(0,n+2)+",ts:"+ts+","+buf.substr(n+3,buf.length);
+   buf = buf.substr(0,n+2)+","+ts+","+buf.substr(n+3,buf.length);
    if (buf.length > blen) buf = buf.substr(buf.length-blen,buf.length);
    });
 
